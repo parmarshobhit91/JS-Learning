@@ -18,7 +18,7 @@ const regularUser = {
     }
 }
 
-console.log(regularUser.fullname.username.firstname);
+// console.log(regularUser.fullname.username.firstname);
 // console.log(regularUser.fullname?.username.firstname);
 
 const obj1 = {
@@ -49,14 +49,47 @@ const users = [
         email: "2@gmail.com"
     }
 ]
-console.log(users[1].email);
-console.log(tinderUser);
+// console.log(users[1].email);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('name'));
-console.log(tinderUser.hasOwnProperty('IsLoggedIn'));
-console.log(tinderUser.hasOwnProperty('isMarried'));
+// console.log(tinderUser.hasOwnProperty('name'));
+// console.log(tinderUser.hasOwnProperty('IsLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isMarried'));
 
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: ins} = course
+
+// console.log(courseInstructor);
+console.log(ins);
+
+// const navbar = ({company}) => {
+
+// }
+
+// navbar(company = "shobhit")
+
+// Below are some examples how API can be given to us
+// in different ways like json or array of objects
+
+// {
+//     "name": "shobhit",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
