@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <ul id="btnmain">
+        <li><button id="btn1">Main hu button 1</button></li>
+        <li><button id="btn2">Main hu button 2</button></li>
+        <li><button id="btn3">Main hu button 3</button></li>
+        <li><button id="btn4">Main hu button 4</button></li>
+        <li><button id="btn5">Main hu button 5</button></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('btn').onclick = function(){
+    //     alert('button clicked')
+    // }
+
+    // another good way to add onclick event is by using addEventListner
+
+    // document.getElementById('btnmain').addEventListener('click', (e) => {
+    //     // alert("Button daba diya")
+    //     console.log('btn clicked');
+        
+    // }, false)
+    // document.getElementById('btn1').addEventListener('click', (e) => {
+    //     // alert("Phir se Button daba diya")
+    //     console.log('btn 1 clicked');
+    //     e.stopPropagation()
+    // }, false)
+
+    // the above false is default value we don't have to write it 
+    // it is considered under event capturing or event propogation or called event bubbling
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    // document.querySelector('#btnmain').addEventListener
+    // ('click', function(e){
+    //     console.log(e.target.parentNode)
+    //     let removeIt = e.target.parentNode
+    //     removeIt.remove()
+    //     // or we can use removeIt.parentNode.removeChild(removeIt)
+    //     // instead of removeIt.remove()
+    // })
+
+    document.querySelector('#btnmain').addEventListener
+    ('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === "BUTTON") {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+            
+        }
+            
+    })
+</script>
+</html>
